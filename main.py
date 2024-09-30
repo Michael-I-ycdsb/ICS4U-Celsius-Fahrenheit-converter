@@ -126,6 +126,7 @@ def enter_temp_value(event) -> None:
                 fahrenheit_clicked = False
             elif event.unicode in num_unicode:
                 typed_text += event.unicode
+                celsius_value_text = font.render(typed_text, True, BLACK)
     
     if fahrenheit_clicked:
         if event.type == pygame.KEYDOWN:
@@ -139,6 +140,7 @@ def enter_temp_value(event) -> None:
                 fahrenheit_clicked = False
             elif event.unicode in num_unicode:
                 typed_text += event.unicode
+                fahrenheit_value_text = font.render(typed_text, True, BLACK)
 
 
 def event_loop() -> None:
